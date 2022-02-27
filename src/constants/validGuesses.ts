@@ -35,6 +35,8 @@ export const VALID_GUESSES = [
 'aboma',
 'aboon',
 'abord',
+'house',
+'wares',
 'abore',
 'abram',
 'abray',

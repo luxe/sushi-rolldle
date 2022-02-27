@@ -182,12 +182,12 @@ function App() {
       setCurrentGuess(`${currentGuess}${value}`)
     }
   }
-  
+
   const currentMaxWordLength = () => {
-    if (isDoingInnerGuesses){
-      return MIDDLE_WORD_LENGTH;
+    if (isDoingInnerGuesses) {
+      return MIDDLE_WORD_LENGTH
     }
-    return MAX_WORD_LENGTH;
+    return MAX_WORD_LENGTH
   }
 
   const onDelete = () => {
@@ -195,25 +195,22 @@ function App() {
       new GraphemeSplitter().splitGraphemes(currentGuess).slice(0, -1).join('')
     )
   }
-  
+
   const EatSound = () => {
     // const [play] = useSound('./sounds/eat.mp3');
-    
-    var audio = new Audio('./eat.mp3');
-audio.play();
 
-};
+    var audio = new Audio('./eat.mp3')
+    audio.play()
+  }
 
   const onEnter = () => {
-    
     // enter does nothing if game is over
     if (isGameWon || isGameLost) {
       return
     }
-    
-    
+
     // you have to do a complete word
-    if ((unicodeLength(currentGuess) === 0)) {
+    if (unicodeLength(currentGuess) === 0) {
       setCurrentRowClass('jiggle')
       return showErrorAlert(EMPTY_LETTERS_MESSAGE, {
         onClose: clearCurrentRowClass,
@@ -229,7 +226,7 @@ audio.play();
     }
 
     // make sure the word is valid
-    if (!isWordInWordList(currentGuess,isDoingInnerGuesses)) {
+    if (!isWordInWordList(currentGuess, isDoingInnerGuesses)) {
       setCurrentRowClass('jiggle')
       return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
         onClose: clearCurrentRowClass,
@@ -246,7 +243,7 @@ audio.play();
         })
       }
     }
-    
+
     EatSound()
 
     setIsRevealing(true)
@@ -257,9 +254,9 @@ audio.play();
     }, REVEAL_TIME_MS * currentMaxWordLength())
 
     const winningWord = isWinningWord(currentGuess)
-    
-    if (isMiddleCorrect(currentGuess)){
-      setDoingInnerGuesses(false);
+
+    if (isMiddleCorrect(currentGuess)) {
+      setDoingInnerGuesses(false)
     }
 
     if (
@@ -274,8 +271,7 @@ audio.play();
         setStats(addStatsForCompletedGame(stats, guesses.length))
         return setIsGameWon(true)
       }
-      
-      
+
       // you lose the game
       if (guesses.length === MAX_CHALLENGES - 1) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
