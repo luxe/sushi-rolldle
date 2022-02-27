@@ -73,19 +73,23 @@ export const getGuessStatuses = (guess: string): CharStatus[] => {
         return
       }
 
-      // now we are left with "present"s
-      const indexOfPresentChar = splitSolution.findIndex(
-        (x, index) => x === letter && !solutionCharsTaken[index+1]
-      )
+      // // now we are left with "present"s
+      // const indexOfPresentChar = splitSolution.findIndex(
+      //   (x, index) => x === letter && !solutionCharsTaken[index+1]
+      // )
 
-      if (indexOfPresentChar > -1) {
-        statuses[i] = 'present'
-        solutionCharsTaken[indexOfPresentChar] = true
-        return
-      } else {
-        statuses[i] = 'absent'
-        return
-      }
+      // if (indexOfPresentChar > -1) {
+      //   statuses[i] = 'present'
+      //   solutionCharsTaken[indexOfPresentChar+1] = true
+      //   return
+      // } else {
+      //   statuses[i] = 'absent'
+      //   return
+      // }
+      
+      statuses[i] = 'present'
+      
+      
     })
     
     // statuses.unshift('absent')
@@ -115,19 +119,24 @@ export const getGuessStatuses = (guess: string): CharStatus[] => {
         return
       }
 
-      // now we are left with "present"s
-      const indexOfPresentChar = splitSolution.findIndex(
-        (x, index) => x === letter && !solutionCharsTaken[index]
-      )
+      // //now we are left with "present"s
+      // const indexOfPresentChar = splitSolution.findIndex(
+      //   (x, index) => x === letter && !solutionCharsTaken[index]
+      // )
 
-      if (indexOfPresentChar > -1) {
-        statuses[i] = 'present'
-        solutionCharsTaken[indexOfPresentChar] = true
-        return
-      } else {
-        statuses[i] = 'absent'
-        return
-      }
+      // if (indexOfPresentChar > -1) {
+      //   statuses[i] = 'present'
+      //   solutionCharsTaken[indexOfPresentChar] = true
+      //   return
+      // } else {
+      //   statuses[i] = 'absent'
+      //   return
+      // }
+      
+      statuses[i] = 'present'
+      
+      
+      
     })
   }
 
