@@ -11,12 +11,13 @@ type Props = {
 export const CompletedRow = ({ guess, isRevealing }: Props) => {
   const statuses = getGuessStatuses(guess)
   const splitGuess = unicodeSplit(guess)
+  
 
   return (
     <div className="flex justify-center mb-1">
     
       {splitGuess.length == MIDDLE_WORD_LENGTH && (
-        <Cell key={0} value={"🥬"} />
+        <Cell key={99} value={"🥬"} />
       )}
       
       {splitGuess.map((letter, i) => (
@@ -30,8 +31,9 @@ export const CompletedRow = ({ guess, isRevealing }: Props) => {
         />
       ))}
       
+      
       {splitGuess.length == MIDDLE_WORD_LENGTH && (
-        <Cell key={4} value={"🥬"} />
+        <Cell key={98} value={"🥬"} />
       )}
       
     </div>
