@@ -80,7 +80,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 
       <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
               <p className="text-sm text-gray-500 dark:text-gray-300">
-        Color hints apply to the entire word.  Hope your hungry!
+        Color hints apply to the entire word.  Hope you're hungry!
       </p>
       </p>
     </BaseModal>
