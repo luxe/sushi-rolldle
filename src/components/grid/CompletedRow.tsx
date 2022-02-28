@@ -1,7 +1,7 @@
 import { getGuessStatuses } from '../../lib/statuses'
 import { Cell } from './Cell'
 import { unicodeSplit } from '../../lib/words'
-import { MAX_WORD_LENGTH, MIDDLE_WORD_LENGTH } from '../../constants/settings'
+import { MIDDLE_WORD_LENGTH } from '../../constants/settings'
 
 type Props = {
   guess: string

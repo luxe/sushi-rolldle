@@ -3,9 +3,6 @@ import {
   ChartBarIcon,
   CogIcon,
 } from '@heroicons/react/outline'
-import useSound from 'use-sound'
-//import soundfile from './eat.mp3'
-// const alarm = require("./eat.mp3");
 import { useState, useEffect } from 'react'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
@@ -196,13 +193,6 @@ function App() {
     )
   }
 
-  const EatSound = () => {
-    // const [play] = useSound('./sounds/eat.mp3');
-
-    var audio = new Audio('./eat.mp3')
-    audio.play()
-  }
-
   const onEnter = () => {
     // enter does nothing if game is over
     if (isGameWon || isGameLost) {
@@ -244,7 +234,7 @@ function App() {
       }
     }
 
-    EatSound()
+    // EatSound()
 
     setIsRevealing(true)
     // turn this back off after all
