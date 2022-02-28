@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sushi-rolldle/static/css/main.afff8480.css",
-    "main.js": "/sushi-rolldle/static/js/main.f5cec6e2.js",
+    "main.js": "/sushi-rolldle/static/js/main.886bd196.js",
     "static/js/787.6a541d2d.chunk.js": "/sushi-rolldle/static/js/787.6a541d2d.chunk.js",
     "index.html": "/sushi-rolldle/index.html",
     "main.afff8480.css.map": "/sushi-rolldle/static/css/main.afff8480.css.map",
-    "main.f5cec6e2.js.map": "/sushi-rolldle/static/js/main.f5cec6e2.js.map",
+    "main.886bd196.js.map": "/sushi-rolldle/static/js/main.886bd196.js.map",
     "787.6a541d2d.chunk.js.map": "/sushi-rolldle/static/js/787.6a541d2d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.afff8480.css",
-    "static/js/main.f5cec6e2.js"
+    "static/js/main.886bd196.js"
   ]
 }
